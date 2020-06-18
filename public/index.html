@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="A web typing application">
+    <meta name="keywords" content="Speed Typing Test">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/elf.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <title>Elf Speed Typing Test</title>
+</head>
+
+<body>
+    <section class="container body-wrap">
+        <header class="welcome">
+            <div class="card">
+                <p class="">Click on the <strong>start</strong> button 
+                below and start typing to find out how fast you are!</p>
+                <div class="buttons">
+                    <button id="btnPlay" class="">
+                        <span class="">Start</span>
+                    </button>
+                    <button id="btnRefresh" class="">
+                        <span class="">Refresh</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <section class="main-display">
+            <div class="display">
+                <p id="info">Start typing and don't use the backspace to correct your
+                mistakes. Your mistakes will be marked below the writing box.<br>Good luck!</p>
+                <!--input -->
+                <div id="textInput" tabindex="0" disabled>
+                    <p></p>
+                </div>
+                <!-- Original input -->
+                <div id="textFull"></div>
+                <!-- output -->
+                <div id="textOutput"></div>
+            </div>
+        </section>
+
+        <section class="box">
+            <div class="box-results">
+                <div class="flexbox-container">
+                    <li class="result-box">Timer: <span id="timer">0</span></li>
+                    <li class="result-box">Total Words: <span id="totalWords">0</span></li>
+                    <li class="result-box">Written Words: <span id="writtenWords">0</span></li>
+                    <li class="result-box">Acuracy <span id="accuracy">0</span></li>
+                </div>
+                <div class="flexbox-container">
+                    <li class="result-box">CPM <span id="cpm">0</span></li>
+                    <li class="result-box">WPM <span id="wpm">0</span></li>
+                    <li class="result-box">Last WPM <span id="results">0</span></li>
+                    <li class="result-box">Errors <span id="errors">0</span></li>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        <section class="average">
+            <p id="aver-text">Word Per Minute <strong>(WPM)</strong> is measured by calculating how many words you can type in 1 minute.
+            Character Per Minute <strong>(CPM)</strong> calculates how many characters are typed per minute.</p>
+            <h5>Typing speed chart</h5>
+            
+            <div id="aver-container">
+                <div id="aver-bar">
+                    <span class="aver"><p style="background: #eb4841">0 - 20 Slow</p></span>
+                    <span class="aver"><p style="background: #f48847">20 - 40 Aver</p></span>
+                    <span class="aver"><p style="background: #ffc84a">40 - 60 Fast</p></span>
+                    <span class="aver"><p style="background: #a6c34c">60 - 80 Pro</p></span>
+                    <span class="aver"><p style="background: #4ec04e">80 .... Top</p></span>
+                </div>
+            </div>
+        </section>
+                  
+        <hr>
+        <footer class="display">
+            <div class="">
+                <p id="location"></p>
+                <p>&copy MiT 2020 - <a href="https://awran5.github.io/speedTyping/">Github</a></p>
+            </div>
+        </footer>
+    </section>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
