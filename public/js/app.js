@@ -30,17 +30,8 @@ locationMessage = select("#location")
 // Array will hold all quotes that stored in external JSON file
 allQuotes = [],
 
-//Quotes url
-quotesUrl = 'https://type.fit/api/quotes'
-//Will use this proxy to solve the CORS issue
-proxyurl = 'https://cors-anywhere.herokuapp.com/'
 //Geolocation url
 geoUrl = 'http://ip-api.com/json/'
-
-fetch(proxyurl + quotesUrl)
-.then(response => response.json())
-.then(data => allQuotes.push(...data))
-.catch(() => console.log("Can’t access " + url + " response. Blocked by browser."))
 
 // Function that returns random key from an array
 const random = (array) => array[Math.floor(Math.random() * array.length)]
@@ -90,6 +81,22 @@ class speedTyping {
   
     // Start typing function when run when Start button clicked
     start() {
+        //Quotes url
+        const quotesUrl = 'https://type.fit/api/quotes'
+        //Will use this proxy to solve CORS issue
+        const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+
+        fetch(proxyUrl + quotesUrl).then((response) => {
+            response.json().then((data) => {
+                if (data.error === 0) {
+                    allQuotes = 0
+                } else {
+                    allQuotes = data
+                }
+            })
+        })
+
+        console.log(allQuotes)
         // Get quotes only
         const getQuote = allQuotes.map((item) => item.text)
         let quoteWords = ''

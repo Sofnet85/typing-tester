@@ -1,2 +1,0 @@
-/* ---- particles.js config ---- */
-
