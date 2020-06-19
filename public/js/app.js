@@ -27,13 +27,20 @@ btnPlay = select("#btnPlay"),
 btnRefresh = select("#btnRefresh"),
 
 locationMessage = select("#location")
-// Array will hold all quotes that stored in external JSON file
-allQuotes = [],
 
 //Geolocation url
 geoUrl = 'http://ip-api.com/json/'
 
-// Function that returns random key from an array
+//Geolocation function
+const geolocation = (callback) => { 
+    fetch(geoUrl).then((response) => {
+      response.json().then((data) => {
+        callback(undefined, data)
+      })
+    })
+  }
+
+// Function that will return random num
 const random = (array) => array[Math.floor(Math.random() * array.length)]
 
 // speedTyping Class
@@ -81,22 +88,6 @@ class speedTyping {
   
     // Start typing function when run when Start button clicked
     start() {
-        //Quotes url
-        const quotesUrl = 'https://type.fit/api/quotes'
-        //Will use this proxy to solve CORS issue
-        const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-
-        fetch(proxyUrl + quotesUrl).then((response) => {
-            response.json().then((data) => {
-                if (data.error === 0) {
-                    allQuotes = 0
-                } else {
-                    allQuotes = data
-                }
-            })
-        })
-
-        console.log(allQuotes)
         // Get quotes only
         const getQuote = allQuotes.map((item) => item.text)
         let quoteWords = ''
@@ -246,14 +237,6 @@ class speedTyping {
 
         localStorage.setItem("WPM", wpm)
     }
-}
-
-const geolocation = (callback) => { 
-  fetch(geoUrl).then((response) => {
-    response.json().then((data) => {
-      callback(undefined, data)
-    })
-  })
 }
 
 //Getting data from quotes 

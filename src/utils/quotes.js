@@ -2,10 +2,10 @@ const request = require('request')
 
 const quotes = (callback) => {
   const quotesUrl = 'https://type.fit/api/quotes'
-  const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+  // const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
 
   // Requesting quotes
-  request({ url: proxyUrl + quotesUrl, json: true }, (error, response) => {
+  request({ url: quotesUrl, json: true }, (error, response) => {
     if (error) {
       callback('', undefined)
     } else {
