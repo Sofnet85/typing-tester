@@ -70,14 +70,24 @@ a:active {
   margin-bottom: 10px;
 }
 
+.timer {
+  visibility: hidden;
+  border-radius: 5px;
+  background: #eae7e7;
+  border: 3px solid rgb(209, 206, 206);
+  margin: 2px;
+  padding: 5px;
+  flex-grow: 1;
+}
+
 #textInput {
   color: rgb(246, 242, 242);
   border-radius: 5px;
-  background: rgb(97, 110, 166);
+  background: #616ea6;
   padding: 20px;
   border: 1px solid rgb(120, 116, 116);
   font-family: "Couruer New", Courier, monospace;
-  text-decoration-color: #e7e8ea;
+  text-decoration-color: #989fad;
 }
 
 #textOutput {
@@ -145,7 +155,6 @@ a:active {
   padding: 2px;
   margin-bottom: 2px;
 }
-
 
 .aver {
   float: left;
