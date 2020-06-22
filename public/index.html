@@ -23,8 +23,8 @@
                     <button id="btnPlay" class="">
                         <span class="">Start</span>
                     </button>
-                    <button id="btnRefresh" class="">
-                        <span class="">Refresh</span>
+                    <button id="btnReset" class="">
+                        <span class="">Reset</span>
                     </button>
                 </div>
             </div>
@@ -32,11 +32,12 @@
 
         <section class="main-display">
             <div class="display">
-                <p id="info">Start typing when you are ready and don't correct your mistakes. Errors won't be displayed and will be counted below the writing box.<br>Good luck!</p>
+                <p id="info">Start typing when you are ready and don't correct your mistakes.
+                Errors won't be displayed and will be counted below the writing box.<br>Good luck!</p>
                 <!-- timer -->
                 <p class="box-results flexbox-container timer">Timer  : <span id="timer"> 0</span></p>
                 <!--input -->
-                <div id="textInput" tabindex="0" disabled></div>
+                <div id="textInput" tabindex="0"></div>
                 <!-- Original input -->
                 <div id="textFull"></div>
                 <!-- output -->
@@ -47,24 +48,24 @@
         <section class="box">
             <div class="box-results">
                 <div class="flexbox-container">
-                    <li class="result-box">Total Words : <span id="totalWords">0</span></li>
-                    <li class="result-box">Written Words : <span id="writtenWords">0</span></li>
-                    <li class="result-box">Seconds : <span id="time">0</span></li>
-                    <li class="result-box">Acuracy : <span id="accuracy">0</span></li>
+                        <li class="result-box">Total Words : <span id="totalWords">0</span></li>
+                        <li class="result-box">Written Words : <span id="writtenWords">0</span></li>
+                        <li class="result-box">Seconds : <span id="time">0</span></li>
+                        <li class="result-box">Acuracy : <span id="accuracy">0</span></li>
                 </div>
                 <div class="flexbox-container">
-                    <li class="result-box">CPM <span id="cpm">0</span></li>
-                    <li class="result-box">WPM <span id="wpm">0</span></li>
-                    <li class="result-box">Last WPM <span id="results">0</span></li>
-                    <li class="result-box">Errors <span id="errors">0</span></li>
+                        <li class="result-box">CPM <span id="cpm">0</span></li>
+                        <li class="result-box">WPM <span id="wpm">0</span></li>
+                        <li class="result-box">Last WPM <span id="results">0</span></li>
+                        <li class="result-box">Errors <span id="errors">0</span></li>
                 </div>
             </div>
         </section>
 
         <hr>
         <section class="average">
-            <p id="aver-text">Words Per Minute <strong>(WPM)</strong> or <strong>(RAW WPM)</strong> is a calculation of exactly how fast you type with no error penalties on a minute average.</p>
-            <p id="aver-text">Characters Per Minute <strong>(CPM)</strong> is the actual number of characters you type per minute.</p>
+            <p id="aver-text">Words Per Minute <strong>(WPM)</strong> or <strong>(RAW WPM)</strong> is a calculation of exactly how fast you type with no error penalties on a minute average. 
+            Characters Per Minute <strong>(CPM)</strong> is the actual number of characters you type per minute.</p>
             <h5>WPM Rating Scale</h5>
             
             <div id="aver-container">
@@ -82,12 +83,12 @@
         <footer class="display">
             <div class="">
                 <p id="location"></p>
-                <p>&copy MiT 2020 - <a href="https://github.com/Sofnet85/typing-tester">Github</a></p>
+                <p>&copy; MiT 2020 - <a href="https://github.com/Sofnet85/typing-tester" target="_blank">Github</a></p>
             </div>
         </footer>
     </section>
-    <script type="text/javascript" src="js/quotes.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

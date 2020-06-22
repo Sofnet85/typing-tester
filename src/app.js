@@ -9,9 +9,7 @@ const port = process.env.PORT || 3000
 //Path for the public directory
 const publicDirectoryPath = path.join(__dirname, '../public')
 
-//Serving the main page (index.html)
-app.use(express.static(publicDirectoryPath))
-
+// Creating the quotes js file
 quotes((error, quotes) => {
   if (error) {
     return res.send({error: 0})
@@ -27,6 +25,9 @@ quotes((error, quotes) => {
     fs.writeFileSync('../public/js/quotes.js', 'const allQuotes = ' + data)
   }
 })
+
+//Serving the main page (index.html)
+app.use(express.static(publicDirectoryPath))
 
 //Server up and running
 app.listen(port, () => console.log('Server is up on Port ' + port))

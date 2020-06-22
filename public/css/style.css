@@ -44,7 +44,7 @@ a:active {
   color: red;
 }
 
-#btnPlay, #btnRefresh {
+#btnPlay, #btnReset {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #7f889a;
   color: white;
@@ -60,7 +60,7 @@ a:active {
   background: #535965;
 }
 
-#btnRefresh:hover {
+#btnReset:hover {
   color: rgb(243, 136, 136);
   background: #535965;
 }
